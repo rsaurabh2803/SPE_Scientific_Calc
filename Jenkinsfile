@@ -1,6 +1,6 @@
 pipeline {
     environment {
-        registry = "rsaurabh135/Scientific_Calc"
+        registry = "rsaurabh135/mini-project"
         registryCredential = 'docker-jenkins'
         dockerImage = ''
         dockerImageLatest = ''
