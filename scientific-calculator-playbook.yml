@@ -12,7 +12,6 @@
     - name: Creating new Container using the pulled image
       shell:
         cmd: docker create -it -v /home/ssr/Downloads/ESD/SPE_Scientific_Calc/Scientific-Calculator.log:/Scientific-Calculator.log --name prod_calc rsaurabh135/mini-project:latest
-:latest
     - name: Remove unused and unncessary Images
       shell:
         cmd: docker image prune -f
