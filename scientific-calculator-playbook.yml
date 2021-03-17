@@ -4,7 +4,7 @@
   tasks:
     - name: Pulling the Scientific Calculator Image
       shell:
-        cmd: docker pull rsaurabh135/miniproject:latest
+        cmd: docker pull rsaurabh135/mini-project:latest
     - name: Removing previous container.
       shell:
         cmd: docker rm prod_calc
