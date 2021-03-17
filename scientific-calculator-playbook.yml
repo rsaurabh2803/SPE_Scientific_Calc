@@ -1,0 +1,18 @@
+---
+- name: Pull the Scientific Calculator image from docker hub in production/dev/qa/staging host and create the container on top of it.
+  hosts: Production_Host
+  tasks:
+    - name: Pulling the Scientific Calculator Image
+      shell:
+        cmd: docker pull rsaurabh135/miniproject:latest
+    - name: Removing previous container.
+      shell:
+        cmd: docker rm prod_calc
+      ignore_errors: yes
+    - name: Creating new Container using the pulled image
+      shell:
+        cmd: docker create -it -v /home/ssr/Downloads/ESD/SPE_Scientific_Calc/Scientific-Calculator.log:/Scientific-Calculator.log --name prod_calc rsaurabh135/SPE_Scientific_Calc
+:latest
+    - name: Remove unused and unncessary Images
+      shell:
+        cmd: docker image prune -f
