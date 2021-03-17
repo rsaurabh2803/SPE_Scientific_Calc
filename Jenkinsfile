@@ -1,7 +1,7 @@
 pipeline {
     environment {
         registry = "rsaurabh135/Scientific_Calc"
-        registryCredential = 'docker-hub-credentials'
+        registryCredential = 'docker-jenkins'
         dockerImage = ''
         dockerImageLatest = ''
   }
